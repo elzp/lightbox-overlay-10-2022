@@ -2,8 +2,8 @@ export default {
   name: 'PopUp',
   data() {
     return {
-      count: 0
-    }
+      count: 0,
+    };
   },
   template: `
   <div
@@ -44,8 +44,8 @@ export default {
           "
           @click="$emit('close')"
         >
-          <img src="https://image.flaticon.com/icons/svg/151/151882.svg"/
-          class="w-2 h-2">
+          <img src="https://image.flaticon.com/icons/svg/151/151882.svg"
+          class="w-2 h-2" />
         </div>
       </div>
     </div> 
@@ -84,5 +84,5 @@ export default {
       </button>
     </div>
   </div>
-</div>`
-}
+</div>`,
+};
