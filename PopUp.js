@@ -1,5 +1,6 @@
 export default {
   name: 'PopUp',
+  props: ['labels'], // title', 'content', 'noButton', 'yesButton
   data() {
     return {
       count: 0,
@@ -24,7 +25,7 @@ export default {
     <div class="rounded-t bg-orange-500">
       <div class="relative py-3 px-2 flex">
         <span class="font-semibold text-white md:text-base text-sm"
-          >Popup Title</span
+          >{{labels.title}}</span
         >
         <div
           class="
@@ -50,7 +51,7 @@ export default {
       </div>
     </div> 
     <div class="bg-gray-200 md:text-base text-sm border-b p-2 h-24">
-      <p>hey! Are u sure u want to do this?</p>
+      <p>{{labels.content}}</p>
     </div>
     <div class="p-2 flex justify-end rounded-b">
       <button
@@ -65,7 +66,7 @@ export default {
           rounded
         "
       >
-        Nope
+        {{labels.noButton}}
       </button>
       <button
         class="
@@ -80,7 +81,7 @@ export default {
           rounded
         "
       >
-        Sure!
+      {{labels.yesButton}}
       </button>
     </div>
   </div>

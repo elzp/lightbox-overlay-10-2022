@@ -6,20 +6,26 @@ const app = createApp({
   data() {
     return {
       isVisible: false,
+      labels: {
+        title: 'Popup Title',
+        content: 'hey! Are u sure u want to do this?',
+        noButton: 'Nope',
+        yesButton: 'Sure!',
+      },
     };
   },
-  components:{
+  components: {
     Button,
-    PopUp
+    PopUp,
   },
   template: `
   <div>
   <Button @show="()=> {isVisible = true}"/>
-  <PopUp v-if="isVisible" @close="()=> {isVisible = false}"/>
+  <PopUp v-if="isVisible" @close="()=> {isVisible = false}" :labels="labels"/>
   </div>`,
 
   methods: {
-    showPopUp(){},
+    showPopUp() {},
   },
 });
 app.mount('#app');
